@@ -1,13 +1,13 @@
 {% set name = "diffeqpy" %}
-{% set version = "2.4.1" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffeqpy-{{ version }}.tar.gz
-  sha256: 4cd093feaee6b70e4f4207ed284f35ff0338e614f5f4d2fd327b854dc8c7f2c0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/diffeqpy-{{ version }}.tar.gz
+  sha256: c7df43d643c74477161e1181514ba7c15968045a6d04b4e616d9c8e33e0f506a
 
 build:
   noarch: python
@@ -19,6 +19,7 @@ requirements:
     - python >=3.6
     - pip
   run:
+    - juliacall >=0.9.14
     - python >=3.6
     - pyjuliacall >=0.9.14
     - jill
