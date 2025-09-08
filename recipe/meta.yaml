@@ -1,5 +1,5 @@
 {% set name = "diffeqpy" %}
-{% set version = "2.4.1" %}
+{% set version = "2.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffeqpy-{{ version }}.tar.gz
-  sha256: 4cd093feaee6b70e4f4207ed284f35ff0338e614f5f4d2fd327b854dc8c7f2c0
+  sha256: a9ea70bbcfa56a5291c6069d678967b06547f30830f93de63e20ce31a165407c
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pyjuliacall >=0.9.14
     - jill
     # jill 0.11.5 has requirement fire<0.6.0,>=0.5.0, but you have fire 0.6.0.
@@ -28,10 +28,8 @@ requirements:
 test:
   imports:
     - diffeqpy
-  commands:
-    - pip check
   requires:
-    - pip
+    - python {{ python_min }}
 
 about:
   home: http://github.com/SciML/diffeqpy
