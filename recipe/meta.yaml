@@ -19,7 +19,6 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - juliacall >=0.9.14
     - python >=3.6
     - pyjuliacall >=0.9.14
     - jill
