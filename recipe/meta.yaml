@@ -16,11 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - juliacall >=0.9.14
-    - python >=3.6
+    - python >={{ python_min }}
     - pyjuliacall >=0.9.14
     - jill
     # jill 0.11.5 has requirement fire<0.6.0,>=0.5.0, but you have fire 0.6.0.
@@ -33,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://github.com/SciML/diffeqpy
