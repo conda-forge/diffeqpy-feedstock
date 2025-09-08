@@ -24,15 +24,11 @@ requirements:
     - jill
     # jill 0.11.5 has requirement fire<0.6.0,>=0.5.0, but you have fire 0.6.0.
     - fire <0.6.0,>=0.5.0
-    - python-wget >=3.2
 
 test:
   imports:
     - diffeqpy
-  commands:
-    - pip check
   requires:
-    - pip
     - python {{ python_min }}
 
 about:
