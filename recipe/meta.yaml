@@ -1,5 +1,5 @@
 {% set name = "diffeqpy" %}
-{% set version = "2.4.2" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffeqpy-{{ version }}.tar.gz
-  sha256: a9ea70bbcfa56a5291c6069d678967b06547f30830f93de63e20ce31a165407c
+  sha256: c7df43d643c74477161e1181514ba7c15968045a6d04b4e616d9c8e33e0f506a
 
 build:
   noarch: python
