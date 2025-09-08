@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/diffeqpy-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diffeqpy-{{ version }}.tar.gz
   sha256: c7df43d643c74477161e1181514ba7c15968045a6d04b4e616d9c8e33e0f506a
 
 build:
